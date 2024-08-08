@@ -6,7 +6,8 @@ CFILES = main.c\
 		init.c\
 		mutex_fn.c\
 		philos_fn.c\
-		threads_fn.c
+		threads_fn.c\
+		monitor.c
 HEADER = inc/philo.h
 NAME = philo
 DIRF = src/

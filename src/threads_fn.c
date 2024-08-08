@@ -19,9 +19,10 @@ bool create_treads(t_data *data)
     i = 0;
     while (i < data->philo_nb)
     {
-        if (pthread_create(&data->philo[i].thread,NULL,philo_rutine,(void*)data) != 0)
+        if (pthread_create(&data->philo[i].thread,NULL,philo_rutine,(void*)&data->philo[i]) != 0)
             return (FALSE);
     }
-    if (pthread_create(&data->philo[i].thread,NULL,monitor_rutine,(void*)data) != 0)
+    if (pthread_create(&data->monitor, NULL,monitor_rutine,(void*)data) != 0)
             return (FALSE);
+    return (TRUE);
 }

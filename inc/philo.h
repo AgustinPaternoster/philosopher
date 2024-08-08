@@ -68,7 +68,7 @@ bool create_forks(pthread_mutex_t *forks, long forks_nb);
 void init_philo(t_data *data, pthread_mutex_t *forks);
 //threas fn
 void *philo_rutine(void *data);
-void monitor_rutine(void *data);
+void *monitor_rutine(void *data);
 //threads
 void pthreads_join(t_data * data);
 //mutex
